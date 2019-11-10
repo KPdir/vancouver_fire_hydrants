@@ -34,7 +34,7 @@ def map_hydrant_data(relpath):
 
     for idx, location in enumerate(zip(df.lat, df.lon)): 
         popup_html = '<p>ID: {ID}<br>STATUS: {STATUS}</p>'.format(**dict(df.loc[idx, ['ID','STATUS']]))
-        popup_iframe = folium.IFrame(html= popup_html, width=200, height=40)
+        popup_iframe = folium.IFrame(html= popup_html, width=200, height=50)
 
         if (idx < 50):
             popup = folium.Popup(popup_iframe, parse_html=True, show=True)
